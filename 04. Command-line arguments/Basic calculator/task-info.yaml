@@ -1,0 +1,111 @@
+type: edu
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      class Main {
+          public static void main(String[] args) {
+              // put your code here
+          }
+      }
+    learner_created: false
+  - name: test/MainTest.java
+    visible: false
+    text: |-
+      import org.junit.After;
+      import org.junit.Before;
+      import org.junit.Test;
+      
+      import java.io.ByteArrayInputStream;
+      import java.io.ByteArrayOutputStream;
+      import java.io.PrintStream;
+      
+      import static org.junit.Assert.assertEquals;
+      
+      public class MainTest {
+          private final PrintStream standardOut = System.out;
+          private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+      
+          @Before
+          public void setUp() {
+              System.setOut(new PrintStream(outputStreamCaptor));
+          }
+      
+          @After
+          public void tearDown() {
+              System.setOut(standardOut);
+          }
+      
+          @Test
+          public void testAddition() {
+              simpleTest("+ 10 20", "30");
+          }
+      
+          @Test
+          public void testUnknownOperator() {
+              simpleTest("% 1 15", "Unknown operator");
+          }
+      
+          @Test
+          public void testAdditionWithPositiveNumbers() {
+              simpleTest("+ 999 1", "1000");
+          }
+      
+          @Test
+          public void testAdditionWithNegativeNumbers() {
+              simpleTest("+ -999 1", "-998");
+          }
+      
+          @Test
+          public void testSubtractionWithPositiveNumbers() {
+              simpleTest("- 100 50", "50");
+          }
+      
+          @Test
+          public void testSubtractionWithNegativeNumbers() {
+              simpleTest("- -100 -50", "-50");
+          }
+      
+          @Test
+          public void testSubtractionWithMixedNumbers() {
+              simpleTest("- -5 10", "-15");
+          }
+      
+          @Test
+          public void testMultiplication() {
+              simpleTest("* 2 5", "10");
+          }
+      
+          @Test
+          public void testMultiplicationWithNegativeNumbers() {
+              simpleTest("* -2 -5", "10");
+          }
+      
+          @Test
+          public void testMultiplicationWithMixedNumbers() {
+              simpleTest("* -2 5", "-10");
+          }
+      
+          @Test
+          public void testUnknownOperatorWithDivision() {
+              simpleTest("/ 10 5", "Unknown operator");
+          }
+      
+          private void simpleTest(String in, String expected) {
+              //Set input stream
+              System.setIn(new ByteArrayInputStream(in.getBytes()));
+      
+              Main.main(in.split("\\s+"));
+              //Get the result
+              String result = outputStreamCaptor.toString().trim();
+      
+              //Check the result
+              String message = "For input:\r\n" + in + "\r\nThe output must be:\r\n" +
+                               expected + "\r\nActual output:\r\n" + result + "\r\n";
+              assertEquals(message, expected, result);
+          }
+      
+      }
+    learner_created: false
+status: Unchecked
+record: -1

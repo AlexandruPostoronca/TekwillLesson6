@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: A multi-dimensional array is an "array of arrays".
+    is_correct: true
+  - text: It's possible to create an array of arrays with different length.
+    is_correct: true
+  - text: It's impossible to store objects of reference types in multidimensional arrays
+    is_correct: false
+  - text: It is impossible to create n-dimensional array with n > 3.
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Unchecked
+record: -1
+custom_name: Multidimensional array features
+local_check: true

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Allocation memory" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Creating arrays" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Declarations" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Equal arrays" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Initializations" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Initializing an array of characters" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Initializing an array of integers" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Initializing an array of longs" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/The last element of an array" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Theory" />
+            <option value="$PROJECT_DIR$/01. Introduction to arrays/Ways to create an array of ints" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Alphabetical order" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Boxes" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Check if an array contains two numbers" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Check if an array is sorted ascending" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Count how many times a number occurs" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Cyclically shifting elements" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Does an array contain N" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Find the sum" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Individual taxes" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Right Rotation" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Sum array elements greater than a value" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/The index of the first max in an array" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/The maximum product of adjacent elements" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/The minimum value of an array" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/The sum of array elements" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Theory" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Triples" />
+            <option value="$PROJECT_DIR$/02. Iterating over arrays/Two numbers never occur next to each other" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Cinema" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Create cube" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Fill the matrix by numbers" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Find the corners" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Getting an element from a 3D array" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Indexing rules" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Maximum element in a matrix" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Multidimensional array features" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Practical applications" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Printing lengths of nested arrays" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Reverse elements" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Rotate a rectangle array" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Swap the columns" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Symmetric matrix" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/The star figure" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/The third row" />
+            <option value="$PROJECT_DIR$/03. Multidimensional array/Theory" />
+            <option value="$PROJECT_DIR$/04. Command-line arguments/Basic calculator" />
+            <option value="$PROJECT_DIR$/04. Command-line arguments/Command line arguments" />
+            <option value="$PROJECT_DIR$/04. Command-line arguments/Get the game mode" />
+            <option value="$PROJECT_DIR$/04. Command-line arguments/How to pass ints" />
+            <option value="$PROJECT_DIR$/04. Command-line arguments/Parameters and their values" />
+            <option value="$PROJECT_DIR$/04. Command-line arguments/Passing three arguments" />
+            <option value="$PROJECT_DIR$/04. Command-line arguments/The index of an argument" />
+            <option value="$PROJECT_DIR$/04. Command-line arguments/Theory" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,74 @@
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.junit.Assert.assertEquals;
+
+public class MainTest {
+    private final PrintStream standardOut = System.out;
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+
+    @Before
+    public void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
+    }
+
+    @After
+    public void tearDown() {
+        System.setOut(standardOut);
+    }
+
+    @Test
+    public void testFromProblem1() {
+        simpleTest("3 4\n0 3 2 4\n2 3 5 5\n5 1 2 3\n", "1 2"); // from problem
+    }
+
+    @Test
+    public void testFromProblem2() {
+        simpleTest("2 2\n-3 -2\n-2 -1", "1 1"); // matrix with negative values, smallest element at position 1,1
+    }
+
+    @Test
+    public void test1() {
+        simpleTest("1 1\n1", "0 0"); // single element matrix
+    }
+
+    @Test
+    public void test2() {
+        simpleTest("2 2\n4 4\n4 4", "0 0"); // matrix with a repeated maximum element
+    }
+
+    @Test
+    public void test3() {
+        simpleTest("3 3\n9 9 9\n8 8 8\n7 7 7", "0 0"); // matrix with same maximum element in all rows
+    }
+
+    @Test
+    public void test4() {
+        simpleTest("4 4\n4 2 3 4\n1 4 3 4\n1 2 4 4\n1 2 3 5", "3 3"); // matrix with a maximum element at position 3, 3
+    }
+
+    @Test
+    public void test5() {
+        // matrix with a maximum element at position 3 4
+        simpleTest("5 5\n25 30 35 40 45\n20 15 10 5 0\n21 16 11 6 1\n26 31 36 41 46\n24 29 34 39 44", "3 4");
+    }
+
+    private void simpleTest(String in, String expected) {
+        //Set input stream
+        System.setIn(new ByteArrayInputStream(in.getBytes()));
+
+        Main.main(new String[]{""});
+        //Get the result
+        String result = outputStreamCaptor.toString().trim();
+
+        //Check the result
+        String message = "For input:\r\n" + in + "\r\nThe output must be:\r\n" + expected + "\r\nActual output:\r\n" + result;
+        assertEquals(message, expected, result);
+    }
+
+}

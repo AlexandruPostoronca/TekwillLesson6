@@ -1,0 +1,95 @@
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.junit.Assert.assertEquals;
+
+public class MainTest {
+    private final PrintStream standardOut = System.out;
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+
+    @Before
+    public void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
+    }
+
+    @After
+    public void tearDown() {
+        System.setOut(standardOut);
+    }
+
+    @Test
+    public void testFromProblem1() {
+        simpleTest("3\n1 2 3\n2 3", "false");
+    }
+
+    @Test
+    public void testFromProblem2() {
+        simpleTest("3\n1 2 3\n3 4", "true");
+    }
+
+    @Test
+    public void testFromProblem3() {
+        simpleTest("10\n3 4 5 6 3 4 6 4 4 8\n5 8", "true");
+    }
+
+    @Test
+    public void test1() {
+        // n and m occur next to each other in the array.
+        simpleTest("5\n1 2 3 2 4\n2 3", "false");
+    }
+
+    @Test
+    public void test2() {
+        // n and m do not occur in the array.
+        simpleTest("5\n1 2 3 4 5\n6 7", "true");
+    }
+
+    @Test
+    public void test3() {
+        // n and m occur next to each other, but in a different order.
+        simpleTest("4\n1 2 3 4\n3 1", "true");
+    }
+
+    @Test
+    public void test4() {
+        // The array only contains one element, n and m cannot occur next to each other.
+        simpleTest("1\n1\n2 3", "true");
+    }
+
+    @Test
+    public void test5() {
+        // The array contains multiple occurrences of n and m, but they never occur next to each other.
+        simpleTest("7\n1 2 3 2 4 5 6\n4 5", "false");
+    }
+
+    @Test
+    public void test6() {
+        // The array contains only two elements, n and m cannot occur next to each other.
+        simpleTest("2\n1 2\n1 2", "false");
+    }
+
+    @Test
+    public void test7() {
+        // The array contains multiple occurrences of n and m, and they occur next to each other in the middle of the array.
+        simpleTest("8\n1 2 3 4 5 6 7 8\n7 6", "false");
+    }
+
+    private void simpleTest(String in, String expected) {
+        //Set input stream
+        System.setIn(new ByteArrayInputStream(in.getBytes()));
+
+        Main.main(new String[]{""});
+        //Get the result
+        String result = outputStreamCaptor.toString().trim();
+
+        //Check the result
+        String message = "For input:\r\n" + in + "\r\nThe output must be:\r\n" + expected + "\r\nActual output:\r\n" + result;
+        assertEquals(message, expected, result);
+    }
+
+}

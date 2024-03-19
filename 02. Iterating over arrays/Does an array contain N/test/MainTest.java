@@ -1,0 +1,73 @@
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.junit.Assert.assertEquals;
+
+public class MainTest {
+    private final PrintStream standardOut = System.out;
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+
+    @Before
+    public void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
+    }
+
+    @After
+    public void tearDown() {
+        System.setOut(standardOut);
+    }
+
+    @Test
+    public void testFromProblem1() {
+        simpleTest("3\n1 3 2\n3\n", "true");
+    }
+
+    @Test
+    public void testFromProblem2() {
+        simpleTest("5\n1 3 2 5 4\n7\n", "false");
+    }
+
+    @Test
+    public void test1() {
+        simpleTest("1\n42\n42\n", "true");
+    }
+
+    @Test
+    public void test2() {
+        simpleTest("5\n1 1 1 1 1\n1\n", "true");
+    }
+
+    @Test
+    public void test3() {
+        simpleTest("5\n1 2 3 4 5\n0\n", "false");
+    }
+
+    @Test
+    public void test4() {
+        simpleTest("3\n1 2 3\n2\n", "true");
+    }
+
+    @Test
+    public void test5() {
+        simpleTest("6\n-1 0 1 2 -2 3\n-2\n", "true");
+    }
+
+    private void simpleTest(String in, String expected) {
+        //Set input stream
+        System.setIn(new ByteArrayInputStream(in.getBytes()));
+
+        Main.main(new String[]{""});
+        //Get the result
+        String result = outputStreamCaptor.toString().trim();
+
+        //Check the result
+        String message = "For input:\r\n" + in + "\r\nThe output must be:\r\n" + expected + "\r\nActual output:\r\n" + result;
+        assertEquals(message, expected, result);
+    }
+
+}

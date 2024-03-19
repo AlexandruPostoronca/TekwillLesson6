@@ -1,0 +1,75 @@
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.Arrays;
+import java.util.Collection;
+
+import static org.junit.Assert.assertEquals;
+
+@RunWith(Parameterized.class)
+public class MainTest {
+    private final String input;
+    private final String expectedOutput;
+
+    private final PrintStream standardOut = System.out;
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+
+    public MainTest(String input, String expectedOutput) {
+        this.input = input;
+        this.expectedOutput = expectedOutput;
+    }
+
+    @Before
+    public void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
+    }
+
+    @After
+    public void tearDown() {
+        System.setOut(standardOut);
+    }
+
+    @Test
+    public void test() {
+        // Set input stream
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        Main.main(new String[]{""});
+
+        // Get the result
+        String result = outputStreamCaptor.toString().trim();
+
+        // Check the result
+        String message = "For input:\n" + input + "\nThe output must be:\n" + expectedOutput + "\nActual output:\n" + result;
+        assertEquals(message, expectedOutput, result);
+    }
+
+    @Parameterized.Parameters
+    public static Collection<Object[]> testCases() {
+        return Arrays.asList(new Object[][]{
+                {"1\n1", "0"},//0
+                {"2\n1 2", "0"},//1
+                {"3\n1 3 2", "0"},//2
+                {"3\n3 2 1", "0"},//3
+                {"10\n1 2 3 4 5 6 7 8 9 10", "8"},//4
+                {"10\n1 2 2 3 3 3 4 5 6 7", "3"},//5
+                {"5\n5 5 5 5 5", "0"},//6
+                {"6\n1 4 7 5 4 3", "0"},//7
+                {"5\n1 2 3 4 5", "3"},//8
+                {"7\n1 2 3 2 3 4 5", "3"},//9
+                {"6\n1 2 4 5 6 7", "2"},//10
+                {"6\n1 4 7 5 4 3", "0"}//11
+        });
+    }
+}
+
+
+
+
+

@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: "double[] doubles = new { 1.0d, 1.1d, 1.2d };"
+    is_correct: false
+  - text: "String[] words = { \"first\", \"second\", \"third\" };"
+    is_correct: true
+  - text: "char[] letters = new char[] { 'A', 'B', 'C' };"
+    is_correct: true
+  - text: "int[] numbers = new int[3] { 1, 2, 3 };"
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 18 Mar 2024 11:01:18 UTC"
+record: -1
+selected_options:
+  - 1
+  - 2
+custom_name: Initializations
+local_check: true

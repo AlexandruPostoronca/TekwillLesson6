@@ -1,0 +1,25 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: 3 3 5 4
+    is_correct: false
+  - text: 3 5 3 4
+    is_correct: true
+  - text: 3 5 4 3
+    is_correct: false
+  - text: 5 3 4 3
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Unchecked
+record: -1
+custom_name: Printing lengths of nested arrays
+local_check: true

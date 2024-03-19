@@ -1,0 +1,25 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: The number of indices is equal to the dimension of the main array minus 1
+    is_correct: false
+  - text: One index
+    is_correct: false
+  - text: It depends on the type of array
+    is_correct: false
+  - text: The number of indices is equal to the dimension of the main array
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Unchecked
+record: -1
+custom_name: Indexing rules
+local_check: true

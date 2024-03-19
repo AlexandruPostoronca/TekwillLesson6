@@ -1,0 +1,20 @@
+title: 06. Arrays
+language: English
+summary: |-
+  This is an introductory about Java arrays.
+  - 01. Introduction to arrays
+  - 02. Iterating over arrays
+  - 03. Multidimensional array
+  - 04. Command-line arguments
+programming_language: Java
+programming_language_version: 17
+content:
+  - 01. Introduction to arrays
+  - 02. Iterating over arrays
+  - 03. Multidimensional array
+  - 04. Command-line arguments
+mode: Study
+environment_settings:
+  jvm_language_level: JDK_17
+vendor:
+  name: Alexandru Umaneț

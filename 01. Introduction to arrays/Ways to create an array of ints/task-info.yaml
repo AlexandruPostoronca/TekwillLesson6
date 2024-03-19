@@ -1,0 +1,36 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: "int numbers[] = new array[10];"
+    is_correct: false
+  - text: "int numbers[] = new int[](10);"
+    is_correct: false
+  - text: "int[] numbers = new array[10];"
+    is_correct: false
+  - text: "int numbers[] = new int[10];"
+    is_correct: true
+  - text: "int[] numbers = new int[10];"
+    is_correct: true
+  - text: "int[] numbers = new int(10);"
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 18 Mar 2024 10:52:48 UTC"
+record: -1
+selected_options:
+  - 3
+  - 4
+custom_name: Ways to create an array of ints
+local_check: true

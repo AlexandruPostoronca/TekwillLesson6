@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: create
+    is_correct: false
+  - text: new
+    is_correct: true
+  - text: array
+    is_correct: false
+  - text: malloc
+    is_correct: false
+  - text: alloc
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 18 Mar 2024 08:58:20 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Allocation memory
+local_check: true

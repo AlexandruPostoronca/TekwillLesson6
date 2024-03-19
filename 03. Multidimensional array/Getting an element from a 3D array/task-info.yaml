@@ -1,0 +1,25 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "arr.get(i, j, k)"
+    is_correct: false
+  - text: "arr(i, j, k)"
+    is_correct: false
+  - text: "arr[i, j, k]"
+    is_correct: false
+  - text: "arr[i][j][k]"
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Unchecked
+record: -1
+custom_name: Getting an element from a 3D array
+local_check: true

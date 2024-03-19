@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: Position of an object in 3D space
+    is_correct: true
+  - text: 2D map on which objects are positioned with coordinates
+    is_correct: true
+  - text: Creating tables
+    is_correct: true
+  - text: Creating matrices
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Unchecked
+record: -1
+custom_name: Practical applications
+local_check: true

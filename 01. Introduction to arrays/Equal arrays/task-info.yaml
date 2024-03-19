@@ -1,0 +1,34 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: "Arrays.equals(numbers2, numbers3)"
+    is_correct: false
+  - text: "Arrays.equals(numbers1, numbers2)"
+    is_correct: true
+  - text: "Arrays.equals(numbers1, numbers1)"
+    is_correct: true
+  - text: "Arrays.equals(numbers3, numbers1)"
+    is_correct: false
+  - text: "Arrays.equals(numbers1, numbers4)"
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 18 Mar 2024 10:59:51 UTC"
+record: -1
+selected_options:
+  - 1
+  - 2
+custom_name: Equal arrays
+local_check: true

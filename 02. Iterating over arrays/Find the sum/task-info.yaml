@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: a
+    is_correct: true
+  - text: b
+    is_correct: false
+  - text: c
+    is_correct: true
+  - text: d
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+          public static void main(String[] args) {
+              // Write your solution here
+          }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 18 Mar 2024 11:06:11 UTC"
+record: -1
+selected_options:
+  - 0
+  - 2
+custom_name: Find the sum
+local_check: true

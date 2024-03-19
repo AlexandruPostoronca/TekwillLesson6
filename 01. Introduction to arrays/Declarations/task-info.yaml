@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: "int numbers[] = new int[10];"
+    is_correct: true
+  - text: "int numbers = new numbers[30];"
+    is_correct: false
+  - text: "int numbers = new int[10];"
+    is_correct: false
+  - text: "int[] numbers = new int[20];"
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    text: |-
+      public class Main {
+         public static void main(String[] args) {
+            // Write your solution here
+         }
+      }
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 18 Mar 2024 08:57:02 UTC"
+record: -1
+selected_options:
+  - 0
+  - 3
+custom_name: Declarations
+local_check: true
