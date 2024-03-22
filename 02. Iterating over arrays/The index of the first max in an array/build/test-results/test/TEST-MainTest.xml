@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MainTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-03-21T15:53:27" hostname="DESKTOP-A97GDF4" time="0.019">
+  <properties/>
+  <testcase name="testArrayWithAllSameElements" classname="MainTest" time="0.012"/>
+  <testcase name="testArrayWithNegativeNumbers" classname="MainTest" time="0.001"/>
+  <testcase name="testOneElementArray" classname="MainTest" time="0.001"/>
+  <testcase name="testArrayWithDescendingOrder" classname="MainTest" time="0.001"/>
+  <testcase name="testArrayWithMultipleMaximums" classname="MainTest" time="0.001"/>
+  <testcase name="testArrayWithAscendingOrder" classname="MainTest" time="0.001"/>
+  <testcase name="testFromProblem1" classname="MainTest" time="0.001"/>
+  <testcase name="testFromProblem2" classname="MainTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

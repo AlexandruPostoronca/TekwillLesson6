@@ -19,7 +19,12 @@ files:
          }
       }
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 21 Mar 2024 20:18:06 UTC"
 record: -1
+selected_options:
+  - 3
 custom_name: Getting an element from a 3D array
 local_check: true

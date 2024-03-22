@@ -19,6 +19,11 @@ files:
          }
       }
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 21 Mar 2024 20:39:22 UTC"
 record: -1
+selected_options:
+  - 2
 local_check: true

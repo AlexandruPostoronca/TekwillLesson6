@@ -19,7 +19,12 @@ files:
          }
       }
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 21 Mar 2024 20:28:14 UTC"
 record: -1
+selected_options:
+  - 3
 custom_name: Indexing rules
 local_check: true

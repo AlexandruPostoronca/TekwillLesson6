@@ -87,5 +87,15 @@ files:
       
       }
     learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: |
+    For input:
+    config-path /something/there config-format json
+    The output must be:
+    config-path=/something/there
+    config-format=json
+    Actual output:
+  time: "Thu, 21 Mar 2024 20:42:54 UTC"
+  expected: "config-path=/something/there\r\nconfig-format=json"
 record: -1
