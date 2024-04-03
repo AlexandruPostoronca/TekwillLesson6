@@ -104,17 +104,8 @@ files:
       
       }
     learner_created: false
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    For input:
-    1 2 3 4 5
-    1
-    The output must be:
-    5 1 2 3 4
-    Actual output:
-    2
-  time: "Fri, 22 Mar 2024 15:31:29 UTC"
-  expected: 5 1 2 3 4
-  actual: 2
+  message: Congratulations!
+  time: "Fri, 22 Mar 2024 16:53:38 UTC"
 record: -1
