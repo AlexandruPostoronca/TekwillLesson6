@@ -13,13 +13,7 @@ quiz_header: 'Select all the correct answers:'
 files:
   - name: src/Main.java
     visible: true
-    text: |-
-      public class Main {
-         public static void main(String[] args) {
-            // Write your solution here
-         }
-      }
-    learner_created: false
+    learner_created: true
 status: Solved
 feedback:
   message: Congratulations!

@@ -1,49 +1,11 @@
 type: edu
 custom_name: Create cube
 files:
+  - name: test/ArrayOperationsTest.java
+    visible: true
+    learner_created: true
   - name: src/ArrayOperations.java
     visible: true
-    text: |-
-      class ArrayOperations {
-          public static int[][][] createCube() {
-              int[][][] cube = //...
-              // write your code here
-              return cube;
-          }
-      }
-    learner_created: false
-  - name: test/ArrayOperationsTest.java
-    visible: false
-    text: |-
-      import org.junit.Test;
-      
-      import static org.junit.Assert.*;
-      
-      public class ArrayOperationsTest {
-      
-          @Test
-          public void testCreateCube() {
-              int[][][] cube = ArrayOperations.createCube();
-      
-              assertEquals(3, cube.length);
-              assertEquals(3, cube[0].length);
-              assertEquals(3, cube[0][0].length);
-              int[][][] expectedCube = new int[3][3][3];
-      
-              expectedCube[0] = new int[][]{{0, 1, 2}, {3, 4, 5}, {6, 7, 8}};
-              expectedCube[1] = new int[][]{{0, 1, 2}, {3, 4, 5}, {6, 7, 8}};
-              expectedCube[2] = new int[][]{{0, 1, 2}, {3, 4, 5}, {6, 7, 8}};
-      
-              // Test that the values are correct
-              for (int i = 0; i < 3; i++) {
-                  for (int j = 0; j < 3; j++) {
-                      for (int k = 0; k < 3; k++) {
-                          assertEquals(expectedCube[i][j][k], cube[i][j][k]);
-                      }
-                  }
-              }
-          }
-      }
-    learner_created: false
+    learner_created: true
 status: Unchecked
 record: -1

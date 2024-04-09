@@ -1,15 +1,6 @@
 type: edu
 custom_name: Alphabetical order
 files:
-  - name: src/Main.java
-    visible: true
-    text: |-
-      class Main {
-          public static void main(String[] args) {
-              // put your code here
-          }
-      }
-    learner_created: false
   - name: test/MainTest.java
     visible: false
     text: |-
@@ -92,6 +83,9 @@ files:
       
       }
     learner_created: false
+  - name: src/Main.java
+    visible: true
+    learner_created: true
 status: Solved
 feedback:
   message: Congratulations!
